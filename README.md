@@ -4,7 +4,7 @@ An easy student management app with basic CRUD operations
 
 ## Getting Started
 
-Sorry this app has some bugs and I will fix and upload a new version of this app :)
+Trying to learn Hive and basic CRUD operations.
 
 A few resources to get you started if this is your first Flutter project:
 
