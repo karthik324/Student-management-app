@@ -1,10 +1,10 @@
 # student_manage
 
-A new Flutter project.
+An easy student management app with basic CRUD operations
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Trying to learn Hive and basic CRUD operations.
 
 A few resources to get you started if this is your first Flutter project:
 
