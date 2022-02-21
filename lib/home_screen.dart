@@ -71,7 +71,11 @@ class _HomePageState extends State<HomePage> {
                     .toLowerCase()
                     .contains(searchInput.toLowerCase()))
                 .toList();
-
+            if (data.isEmpty) {
+              return Center(
+                child: Text('Sorry, no results found :('),
+              );
+            }
             return ListView.builder(
               itemBuilder: (context, index) {
                 // Student? data = value.getAt(index);

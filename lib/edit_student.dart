@@ -23,6 +23,9 @@ class _EditStudentState extends State<EditStudent> {
   TextEditingController ageController = TextEditingController();
   TextEditingController placeController = TextEditingController();
 
+  int? newIndex;
+  int? newKey;
+  int? accessKey;
   XFile? image;
   String? imagePath;
 
@@ -30,6 +33,15 @@ class _EditStudentState extends State<EditStudent> {
     nameController.text = widget.obj[widget.index].name;
     ageController.text = widget.obj[widget.index].age.toString();
     placeController.text = widget.obj[widget.index].place;
+    imagePath = widget.obj[widget.index].imagePath;
+    newKey = widget.obj[widget.index].key;
+    List<Student> student = widget.box.values.toList();
+    for (int i = 0; i < student.length; i++) {
+      if (student[i].key == newKey) {
+        accessKey = i;
+        break;
+      }
+    }
   }
 
   @override
@@ -105,7 +117,7 @@ class _EditStudentState extends State<EditStudent> {
                   ElevatedButton(
                       onPressed: () {
                         widget.box.putAt(
-                            widget.index,
+                            accessKey!,
                             Student(
                                 imagePath: imagePath,
                                 name: nameController.text,
