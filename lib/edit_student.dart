@@ -6,7 +6,7 @@ import 'package:student_manage/student.dart';
 import 'dart:core';
 
 class EditStudent extends StatefulWidget {
-  var box = Hive.box<Student>('student');
+  final box = Hive.box<Student>('student');
   final List<Student> obj;
   final int index;
   // final formKey = GlobalKey<FormState>();
@@ -23,7 +23,6 @@ class _EditStudentState extends State<EditStudent> {
   TextEditingController ageController = TextEditingController();
   TextEditingController placeController = TextEditingController();
 
-  int? newIndex;
   int? newKey;
   int? accessKey;
   XFile? image;

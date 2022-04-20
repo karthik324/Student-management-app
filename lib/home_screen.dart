@@ -7,7 +7,7 @@ import 'package:student_manage/student.dart';
 import 'package:student_manage/student_view.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                     .contains(searchInput.toLowerCase()))
                 .toList();
             if (data.isEmpty) {
-              return Center(
+              return const Center(
                 child: Text('Sorry, no results found :('),
               );
             }
@@ -136,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                                               data[index].delete();
                                               Navigator.pop(context);
                                             },
-                                            child: Text('Yes'))
+                                            child: const Text('Yes'))
                                       ],
                                     );
                                   });

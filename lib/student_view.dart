@@ -5,7 +5,7 @@ import 'package:hive/hive.dart';
 import 'package:student_manage/student.dart';
 
 class StudentView extends StatelessWidget {
-  var box = Hive.box<Student>('student');
+  final box = Hive.box<Student>('student');
   final List<Student> obj;
   final int index;
   StudentView({Key? key, required this.obj, required this.index})
